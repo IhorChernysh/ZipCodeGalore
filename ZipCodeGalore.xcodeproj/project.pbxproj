@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5604C59F282C46B700B47F0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604C59E282C46B700B47F0C /* AppDelegate.swift */; };
 		5604C5A1282C46B700B47F0C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604C5A0282C46B700B47F0C /* SceneDelegate.swift */; };
-		5604C5A3282C46B700B47F0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5604C5A2282C46B700B47F0C /* ViewController.swift */; };
 		5604C5A6282C46B700B47F0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5604C5A4282C46B700B47F0C /* Main.storyboard */; };
 		5604C5A8282C46B900B47F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5604C5A7282C46B900B47F0C /* Assets.xcassets */; };
 		5604C5AB282C46B900B47F0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5604C5A9282C46B900B47F0C /* LaunchScreen.storyboard */; };
@@ -36,7 +35,6 @@
 		5604C59B282C46B700B47F0C /* ZipCodeGalore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZipCodeGalore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5604C59E282C46B700B47F0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5604C5A0282C46B700B47F0C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5604C5A2282C46B700B47F0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5604C5A5282C46B700B47F0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5604C5A7282C46B900B47F0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5604C5AA282C46B900B47F0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,13 +94,12 @@
 			isa = PBXGroup;
 			children = (
 				5604C5D2282C5D4A00B47F0C /* Extensions */,
+				5604C5B9282C4AA500B47F0C /* Models */,
 				5604C5CF282C5B0D00B47F0C /* NetworkConnection */,
 				5604C5BE282C4C7900B47F0C /* Screens */,
-				5604C5B9282C4AA500B47F0C /* Models */,
 				5604C5B2282C47B200B47F0C /* Services */,
 				5604C59E282C46B700B47F0C /* AppDelegate.swift */,
 				5604C5A0282C46B700B47F0C /* SceneDelegate.swift */,
-				5604C5A2282C46B700B47F0C /* ViewController.swift */,
 				5604C5A4282C46B700B47F0C /* Main.storyboard */,
 				5604C5A7282C46B900B47F0C /* Assets.xcassets */,
 				5604C5A9282C46B900B47F0C /* LaunchScreen.storyboard */,
@@ -114,9 +111,7 @@
 		5604C5B2282C47B200B47F0C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				5604C5B3282C47CC00B47F0C /* ZippopotamAPI.swift */,
-				5604C5B5282C480900B47F0C /* TargetEndpoint.swift */,
-				5604C5B7282C49F500B47F0C /* APIError.swift */,
+				5604C5DB282C71D700B47F0C /* API */,
 				5604C5CD282C57EE00B47F0C /* ZipCodeNetworkService.swift */,
 			);
 			path = Services;
@@ -134,8 +129,8 @@
 		5604C5BE282C4C7900B47F0C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				5604C5BF282C4C8500B47F0C /* Home */,
 				5604C5C4282C4FAC00B47F0C /* Detail */,
+				5604C5BF282C4C8500B47F0C /* Home */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -192,6 +187,16 @@
 				5604C5D9282C6E5D00B47F0C /* UIView+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5604C5DB282C71D700B47F0C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5604C5B7282C49F500B47F0C /* APIError.swift */,
+				5604C5B3282C47CC00B47F0C /* ZippopotamAPI.swift */,
+				5604C5B5282C480900B47F0C /* TargetEndpoint.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		B8A6803D66651F7EB38B5F73 /* Frameworks */ = {
@@ -328,7 +333,6 @@
 			files = (
 				5604C5BB282C4AC200B47F0C /* PlaceInfo.swift in Sources */,
 				5604C5CE282C57EE00B47F0C /* ZipCodeNetworkService.swift in Sources */,
-				5604C5A3282C46B700B47F0C /* ViewController.swift in Sources */,
 				5604C59F282C46B700B47F0C /* AppDelegate.swift in Sources */,
 				5604C5CC282C512600B47F0C /* HomeZipTableViewCell.swift in Sources */,
 				5604C5C6282C4FC100B47F0C /* DetailsViewController.swift in Sources */,
